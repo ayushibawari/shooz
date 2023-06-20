@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    width: 100%;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 50px;
+    background: rgb(255, 227, 45);
+    box-shadow: 0 2px 25px rgba(37, 20, 21, 0.6);
+    position: sticky;
+    z-index: 999;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 30px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(60, 32, 32);
+    transition: 0.4s ease;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgb(46, 49, 49);
+    position: absolute;
+    bottom: -2px;
+    left: 30px;
+}
+
+#ayushi {
+    background-color: whitesmoke;
+    height: 65vh;
+    padding: 5px 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+#ayushi h1 {
+    color: rgb(74, 66, 66);
+    font-size: 70px;
+    font-weight: 600;
+    text-align: left;
+    padding-right: 130px;
+}
+
+#lower {
+    background-color: rgb(245, 10, 10);
+    height: 30vh;
+    padding: 5px 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+#lower h3 {
+    color: rgb(17, 15, 15);
+    font-size: 35px;
+    font-weight: 600;
+    text-align: left;
+    padding-right: 150px;
+}
+
+#lower h4 {
+    color: rgb(0, 0, 0);
+    font-size: 180px;
+    font-weight: 800;
+    text-align: center;
+}
+
+#new {
+    height: 5vh;
+    background-color: rgb(1, 5, 8);
+}
+
+#new h1 {
+    height: 2vh;
+    color: rgba(251, 249, 249, 0.952);
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    padding-bottom: 1px;
+}
+
+#arrival {
+    height: 75vh;
+    background-color: rgba(251, 249, 249, 0.952);
+    padding-bottom: 3px;
+}
+
+#arrival .arr-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#arrival .arr {
+    width: 23%;
+    min-width: 200px;
+    padding: 10px 12px;
+    border: 1px solid rgb(233, 215, 213);
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 20px 20px 30px rgb(9, 10, 11, 0.2);
+    margin: 15px 20px;
+    transform: 0.3s ease;
+    position: relative;
+}
+
+#arrival .arr:hover {
+    box-shadow: 20px 20px 30px rgb(9, 10, 11, 0.6);
+}
+
+#arrival .arr img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#arrival .arr .des {
+    text-align: start;
+    padding: 5px 0;
+}
+
+#arrival .arr .des span {
+    color: rgb(108, 44, 11);
+    font-size: 14px;
+    font-weight: 200;
+}
+
+#arrival .arr .des h5 {
+    padding-top: 4px;
+    color: black;
+    font-size: 18px;
+    font-weight: 800px;
+}
+
+#arrival .arr .des h4 {
+    padding-top: 4px;
+    color: rgb(9, 185, 21);
+    font-size: 16px;
+    font-weight: 800px;
+}
+
+#arrival .arr .heart {
+    height: 40px;
+    width: 40px;
+    color: rgb(237, 5, 5);
+    position: absolute;
+    bottom: 0;
+    right: 35px;
+}
+
+#arrival .arr .cart {
+    height: 40px;
+    width: 40px;
+    color: rgb(6, 227, 58);
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-image: url(image/banner.png);
+    width: 100%;
+    height: 25vh;
+    margin: 10px 0;
+}
+
+#banner h4 {
+    font-size: 80px;
+    font-weight: 400px;
+}
+
+#banner h5 {
+    font-size: 60px;
+    font-weight: 300px;
+}
+
+footer {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(233, 240, 240);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+footer .logo {
+    margin-bottom: 2px;
+    height: 30px;
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 70px;
+}
+
+footer h1 {
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+footer h2 {
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+footer p {
+    font-size: 15px;
+    padding-bottom: 2px;
+}
+
+footer a {
+    font-size: 15px;
+    padding-bottom: 2px;
+    color: black;
+    text-decoration: none;
+}
+
+footer .follow {
+    padding-top: 5px;
+}
+
+footer .follow i {
+    color: darkblue;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .col i {
+    color: darkblue;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .install img {
+    padding: 10px 0;
+}
+
+footer .install p {
+    padding: 3px 0;
+}
+
+@media (max-width:800px) {
+    #navbar {
+        display: flex;
+        align-items: center;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 300px;
+    }
+}
