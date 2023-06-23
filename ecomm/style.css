@@ -7,17 +7,23 @@
 
 body {
     width: 100%;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 #header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1px 50px;
-    background: rgb(255, 227, 45);
-    box-shadow: 0 2px 25px rgba(37, 20, 21, 0.6);
     position: sticky;
-    z-index: 999;
+    top: 0;
+    padding: 1px 50px;
+    box-shadow: 0 2px 25px rgba(37, 20, 21, 0.6);
+    z-index: 9;
+    background-color: rgb(254, 236, 36);
 }
 
 #navbar {
@@ -36,7 +42,7 @@ body {
     text-decoration: none;
     font-size: 20px;
     font-weight: 600;
-    color: rgb(60, 32, 32);
+    color: rgb(20, 19, 19);
     transition: 0.4s ease;
 }
 
@@ -45,83 +51,60 @@ body {
     content: "";
     width: 30%;
     height: 2px;
-    background: rgb(46, 49, 49);
+    background: rgb(13, 15, 15);
     position: absolute;
     bottom: -2px;
     left: 30px;
 }
 
-#ayushi {
-    background-color: whitesmoke;
-    height: 65vh;
-    padding: 5px 50px;
+#main {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 
-#ayushi h1 {
-    color: rgb(74, 66, 66);
-    font-size: 70px;
-    font-weight: 600;
-    text-align: left;
-    padding-right: 130px;
-}
-
-#lower {
-    background-color: rgb(245, 10, 10);
-    height: 30vh;
-    padding: 5px 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-}
-
-#lower h3 {
-    color: rgb(17, 15, 15);
-    font-size: 35px;
-    font-weight: 600;
-    text-align: left;
-    padding-right: 150px;
-}
-
-#lower h4 {
-    color: rgb(0, 0, 0);
-    font-size: 180px;
-    font-weight: 800;
+#main h1 {
+    font-size: 300px;
+    position: absolute;
+    object-fit: cover;
     text-align: center;
+    line-height: 100vh;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    background: rgb(108, 10, 245);
 }
 
-#new {
-    height: 5vh;
-    background-color: rgb(1, 5, 8);
-}
-
-#new h1 {
-    height: 2vh;
-    color: rgba(251, 249, 249, 0.952);
-    font-size: 40px;
-    font-weight: 800;
-    text-align: center;
-    padding-bottom: 1px;
+#main video {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 #arrival {
     height: 75vh;
-    background-color: rgba(251, 249, 249, 0.952);
+    background-color: rgba(247, 243, 243, 0.952);
     padding-bottom: 3px;
 }
 
 #arrival .arr-container {
     display: flex;
     justify-content: space-around;
+    background-color: rgba(247, 243, 243, 0.952);
 }
 
 #arrival .arr {
     width: 23%;
     min-width: 200px;
     padding: 10px 12px;
-    border: 1px solid rgb(233, 215, 213);
+    border: 1px solid rgb(246, 244, 244);
     cursor: pointer;
     border-radius: 20px;
     box-shadow: 20px 20px 30px rgb(9, 10, 11, 0.2);
@@ -272,17 +255,43 @@ footer .install p {
     padding: 3px 0;
 }
 
-@media (max-width:800px) {
-    #navbar {
-        display: flex;
-        align-items: center;
-        align-items: flex-start;
-        flex-direction: column;
-        justify-content: flex-start;
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 300px;
+.marquee {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.marquee div {
+    color: antiquewhite;
+    font-size: 40px;
+    background: black;
+    font-weight: 800;
+    white-space: nowrap;
+    padding: 0 45px;
+    letter-spacing: 1px;
+    animation: animate 20s linear infinite;
+    animation-delay: -19s;
+}
+
+.marquee h2:nth-child(2) {
+    animation: animate2 20s linear infinite;
+    animation-delay: -10s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200%);
     }
 }
